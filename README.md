@@ -52,6 +52,11 @@ Le package event.management.web.service contient la classe de service d'un évè
     * De récupérer un évènement à partir d'un artiste.
     * De récupérer tout les évènements.
    
+### :black_medium_small_square: API
+Nous avons utiliser l'API de Spotify afin de récupérer la nationalité des artistes.
+
+Sachant que celle-ci ne propose pas la nationalité des artistes, nous avons décider de procurer à la place la popularité des artistes.
+
 ## :black_medium_square: Autres
 Voici les liens vers les autres référentiels sur la plateforme GitHub :
   * Lien vers le référentiel du projet WS : https://github.com/Salma-Bch/theMovieAdvisorsWS.git
