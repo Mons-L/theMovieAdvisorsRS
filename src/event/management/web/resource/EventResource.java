@@ -22,6 +22,13 @@ public class EventResource {
 	@Context
 	UriInfo uriInfo;
 	
+	/**
+	 * Méthode permettant d'ajouter un évènement.
+	 *  
+	 * @param event
+	 * @return Une response.
+	 *
+	 */
 	@POST
 	//@Path("addEvent/{name}")
 	@Consumes(MediaType.APPLICATION_XML)
@@ -39,6 +46,13 @@ public class EventResource {
 		.build();
 	}
 		
+	/**
+	 * Méthode permettant de récupérer les évènements à partir d'une région.
+	 *  
+	 * @param area
+	 * @return Une response.
+	 *
+	 */
 	@GET
 	@Path("/areas/{area}")
 	@Produces(MediaType.APPLICATION_XML)
@@ -57,6 +71,14 @@ public class EventResource {
 			.build();
 	}
 	
+	/**
+	 * Méthode permettant de récupérer les évènements à partir d'un artiste.
+	 *  
+	 * @param id
+	 * @param artiste
+	 * @return Une response.
+	 *
+	 */
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_XML)
@@ -75,6 +97,12 @@ public class EventResource {
 			.build();
 	}
 	
+	/**
+	 * Méthode permettant de récupérer tout les évènements.
+	 *  
+	 * @return Une response.
+	 *
+	 */
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public Response getAllEvents() {
