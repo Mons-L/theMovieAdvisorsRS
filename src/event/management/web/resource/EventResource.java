@@ -8,6 +8,13 @@ import event.management.web.data.Artist;
 import event.management.web.data.Event;
 import event.management.web.service.EventService;
 
+/**
+ * EventResource est la classe du service d'un évènement.
+ * 
+ * @author Salma BENCHELKHA & Mouncif LEKMITI
+ * @version 1.0
+ *
+ */
 @Path("/events")
 public class EventResource {
 	EventService service = new EventService();
