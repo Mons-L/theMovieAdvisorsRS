@@ -38,19 +38,7 @@ public class EventResource {
 		.contentLocation(uri.resolve(newUri))
 		.build();
 	}
-	
-	/*
-	@DELETE
-	@Path("/{id}")
-	@Produces(MediaType.APPLICATION_XML)
-	public Response deleteStudent(@PathParam("id") int id) {
-	if(service.deleteStudent(id) == false) {
-	return Response.status(Response.Status.NOT_FOUND).build();
-	}
-	return Response.status(Response.Status.OK).build();
-	}*/
-	
-	
+		
 	@GET
 	@Path("/areas/{area}")
 	@Produces(MediaType.APPLICATION_XML)
@@ -70,7 +58,7 @@ public class EventResource {
 	}
 	
 	@GET
-	@Path("/artist/{id}")
+	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_XML)
 	public Response getEventByArtist(@PathParam("id")int id, @QueryParam("artist")Artist artist) {
 		Event[] events = service.getEventsByArtist(id,artist);
@@ -86,6 +74,14 @@ public class EventResource {
 			.links(link)
 			.build();
 	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getAllEvents() {
+		return Response.status(Response.Status.OK)
+	                   .entity(service.getAllEvents())
+	                   .build();
+	  }
 
 
 }

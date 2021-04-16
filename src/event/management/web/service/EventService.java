@@ -49,22 +49,6 @@ public class EventService {
 	}
 
 	/**
-	 * Méthode permettant de supprimer un évènement.
-	 *  
-	 * @param id
-	 * @return Retourne "true" si l'évènement a été supprimer ou "false" en cas d'erreur.
-	 *
-	 */
-	/*public boolean deleteEvent(int id) {
-		boolean removed = false ;
-		if(EVENT_DATA.containsKey(id)) {
-			Event event = EVENT_DATA.get(id);
-			removed = EVENT_DATA.remove(id, event);
-		}
-		return removed;
-	}*/
-
-	/**
 	 * Méthode permettant de récupérer les évènements à partir d'une région.
 	 *  
 	 * @param area
@@ -104,6 +88,6 @@ public class EventService {
 	 *
 	 */
 	public Event[] getAllEvents() {
-		return (Event[])EVENT_DATA.values().toArray();
+		return EVENT_DATA.values().toArray(new Event[EVENT_DATA.values().size()]);
 	}
 }
