@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"event.management.web.data","l":"Artist"},{"p":"event.management.web.data","l":"Event"},{"p":"event.management.web.resource","l":"EventResource"},{"p":"event.management.web.service","l":"EventService"}]
